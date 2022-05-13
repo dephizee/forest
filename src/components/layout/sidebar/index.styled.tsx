@@ -248,4 +248,23 @@ export const StyledLayout = styled(Layout)`
             background: var(--accent35)!important;
         }
     }
+
+    .ant-layout-footer{
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .start, b{
+            color: var(--disabled-color);
+        }
+        .end{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        span{
+            color: var(--accent);
+        }
+       
+    }
 `;

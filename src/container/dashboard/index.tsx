@@ -1,4 +1,4 @@
-import { H1Styled, SectionOneContainer, SectionTwoContainer, SectionThreeContainer } from "@/components";
+import { H1Styled, SectionOneContainer, SectionTwoContainer, SectionThreeContainer, SectionFourContainer } from "@/components";
 import { Breadcrumb } from "antd";
 import { Container } from "./index.styled";
 
@@ -16,6 +16,7 @@ export const DashboardContainer = () => {
         <SectionOneContainer/>
         <SectionTwoContainer/>
         <SectionThreeContainer/>
+        <SectionFourContainer/>
     </Container>
   );
 };

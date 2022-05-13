@@ -168,8 +168,18 @@ export const SideBar =  (props:SideBarProps) => {
             </Header>
             <Content style={{ margin: '24px 16px 0' }}>
                 {content}
+                <Footer style={{ textAlign: 'center' }}>
+                  <div className="start">Colored Strategies 2021</div>
+                  <div className="end">
+                    <span>Review</span>
+                    <b>|</b>
+                    <span>Purchase</span>
+                    <b>|</b>
+                    <span>Doc</span>
+                  </div>
+                </Footer>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+              
             </Layout>
         </StyledLayout>
         )
