@@ -11,7 +11,7 @@ interface ListRowOneProps {
     date: string;
     primary?: boolean;
 }
-export const ListRowOne = (props: ListRowOneProps) => {
+const ListRowOne = (props: ListRowOneProps) => {
     const {icon, text, date, primary=false} = props;
     return (<StyledRow>
         <div className={`icon ${primary&&'primary'}`}>
@@ -33,7 +33,7 @@ interface ListRowtwoProps {
     note: string;
     rate: number;
 }
-export const ListRowTwo = (props: ListRowtwoProps) => {
+const ListRowTwo = (props: ListRowtwoProps) => {
     const {src, name, product, note, rate} = props;
     return (<StyledListRow>
         <div className="image">

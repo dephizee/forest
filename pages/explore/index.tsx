@@ -1,9 +1,7 @@
-import { Breadcrumb, Button, Layout, Menu, MenuProps } from 'antd'
-import { Content, Header } from 'antd/lib/layout/layout'
-import Sider from 'antd/lib/layout/Sider'
+import { Button } from 'antd'
+
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+
 import React, { useContext } from 'react'
 import { ThemeContext } from '@/context'
 

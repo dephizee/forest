@@ -33,6 +33,6 @@ function MyApp({ Component, pageProps }: MyAppProps) {
 
 
 
-export default MyApp;
-// export default wrapper.withRedux(MyApp);
+// export default MyApp;
+export default wrapper.withRedux(MyApp);
 

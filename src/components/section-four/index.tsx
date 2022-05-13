@@ -1,7 +1,6 @@
 import { CustomCard, TitleStyled, UtilContainer } from "@/components";
-import { Avatar, Col, Rate, Row, Typography, Button, Tag } from "antd";
-import { ReactNode } from "react";
-import { StyledDetails, StyledListRow, StyledRow } from "./index.styled";
+import { Avatar, Col, Row, Typography, Tag } from "antd";
+import { StyledListRow, StyledRow } from "./index.styled";
 const { Text } = Typography;
 
 
@@ -9,7 +8,7 @@ interface ListRowOneProps {
     text: string;
     num: string;
 }
-export const ListRowOne = (props: ListRowOneProps) => {
+const ListRowOne = (props: ListRowOneProps) => {
     const {text, num, } = props;
     return (<StyledRow>
         
@@ -31,7 +30,7 @@ interface ListRowtwoProps {
     note: string;
     rate?: number;
 }
-export const ListRowTwo = (props: ListRowtwoProps) => {
+const ListRowTwo = (props: ListRowtwoProps) => {
     const {src, name, product, note} = props;
     return (<StyledListRow>
         <div className="image">

@@ -9,7 +9,7 @@ interface SectionRowProps {
 }
 
 
-export const SectionRow = (props:SectionRowProps) => {
+const SectionRow = (props:SectionRowProps) => {
   const { orderNumber,color, status, amount, timeRange } = props;
   return (
         <DivRow>

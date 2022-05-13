@@ -1,18 +1,10 @@
 import { Avatar, Button, Dropdown, Layout, Menu, MenuProps } from 'antd';
 import {
-  AppstoreOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  ShopOutlined,
-  TeamOutlined,
   UserOutlined,
-  UploadOutlined,
-  VideoCameraOutlined,
   LaptopOutlined,
   NotificationOutlined,
   SearchOutlined,
   LockOutlined,
-  BulbOutlined,
   BellOutlined,
 } from '@ant-design/icons';
 import { createElement, ReactNode, useContext, useEffect, useState } from 'react';
@@ -38,32 +30,14 @@ const items2: MenuProps['items'] = [UserOutlined, LaptopOutlined, NotificationOu
       };
     },
   );
+  const itemsDD = [
+    { label: 'EN', key: 'item-1' }, // remember to pass the key prop
+    { label: 'ES', key: 'item-2' }, // which is required
+    { label: 'DE', key: 'item-3' }, // which is required
+    { label: 'FR', key: 'item-4' }, // which is required
+  ];
 const menu = (
-    <Menu
-      items={[
-        {
-          label: (
-            <span>
-              EN
-            </span>
-          ),
-        },
-        {
-          label: (
-            <span>
-              ES
-            </span>
-          ),
-        },
-        {
-          label: (
-            <span>
-              DE
-            </span>
-          ),
-        },
-      ]}
-    />
+    <Menu items={itemsDD}/>
   );
 interface SideBarProps {
     content: ReactNode | ReactNode[];
@@ -90,15 +64,15 @@ export const SideBar =  (props:SideBarProps) => {
                 setBroken(broken);
                 if(!broken)setCollaped(broken)
             }}
-            onCollapse={(collapsed, type) => {
-                console.log('onCollapse',collapsed, type);
-            }}
-            onMouseEnter={(e) => {
+            // onCollapse={(collapsed, type) => {
+            //     console.log('onCollapse',collapsed, type);
+            // }}
+            onMouseEnter={() => {
                 if (broken) {
                     setCollaped(false)
                 }
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={() => {
               if (broken) {
                   setCollaped(true)
               }
@@ -147,7 +121,7 @@ export const SideBar =  (props:SideBarProps) => {
 
             </Sider>
             <Layout
-              onClick={(e) => {
+              onClick={() => {
                 if (broken && !collaped) {
                     setCollaped(true)
                 }
@@ -158,7 +132,7 @@ export const SideBar =  (props:SideBarProps) => {
                   <img className='logo-lg' src="/logo-lg.png" alt="" />
               </div>
               <Button 
-                onClick={(e) => {
+                onClick={() => {
                   setCollaped(false)
                 }}
               type='text' ghost>
